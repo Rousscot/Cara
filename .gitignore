@@ -2,3 +2,7 @@
 **/.project
 **/.classpath
 **/.settings
+**/out/
+**/.idea
+**/*.iml
+**/lib/
