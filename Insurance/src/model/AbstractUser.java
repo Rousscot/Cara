@@ -1,7 +1,11 @@
 package model;
 
+import javax.persistence.*;
+import java.io.Serializable;
+
 @Entity
-public class AbstractUser {
+@NamedQuery(name = "allUsers", query = "select b.lastName from AbstractUser AS b")
+public class AbstractUser implements Serializable {
 
     protected Long id;
 
@@ -61,5 +65,5 @@ public class AbstractUser {
         hash += (id != null ? id.hashCode() : 0);
         return hash;
     }
-    
+
 }
