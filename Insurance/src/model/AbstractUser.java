@@ -1,12 +1,18 @@
 package model;
 
-import javax.persistence.*;
 import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 
 @Entity
 @NamedQuery(name = "allUsers", query = "select b.lastName from AbstractUser AS b")
-public class AbstractUser implements Serializable {
+public abstract class AbstractUser implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     protected Long id;
 
     protected String firstName;
@@ -17,8 +23,6 @@ public class AbstractUser implements Serializable {
 
     protected String password;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
         return id;
     }
