@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ma belle application cliente Web</title>
+</head>
+<body>
+<a href="ServletLister">liste des livres</a>
+<br><br>
+<FORM ACTION="ServletAjouter" METHOD=POST>
+Auteur <INPUT NAME="auteur" SIZE=15> <P>
+Titre <INPUT NAME="titre" SIZE=15> <P>
+<INPUT TYPE=SUBMIT VALUE="Ajouter">
+<INPUT TYPE=RESET VALUE="Remise à zéro"> <P>
+</FORM>
+<br><br>
+<FORM ACTION="ServletChercher" METHOD=POST>
+Titre <INPUT NAME="titre" SIZE=15> <P>
+<INPUT TYPE=SUBMIT VALUE="Chercher">
+<INPUT TYPE=RESET VALUE="Remise à zéro"> <P>
+</FORM>
+<br><br>
+<FORM ACTION="ServletLogout" METHOD=POST>
+<INPUT TYPE=SUBMIT VALUE="Logout">
+</FORM>
+</body>
+</html>
